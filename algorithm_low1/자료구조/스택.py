@@ -18,39 +18,41 @@ top: 스택의 가장 위에 있는 정수를 출력한다. 만약 스택에 들
 [출력]
 출력해야하는 명령이 주어질 때마다, 한 줄에 하나씩 출력한다.
 '''
+import sys
 
 stack = []
-n = int(input())
+n = int(sys.stdin.readline())
 
 for i in range(n):
-    X = input()
+    cmd = sys.stdin.readline().split()
 
-    cmd = X.split()
     if cmd[0] == "push":
-        num = int(cmd[1])
-        stack.append(num)
+        stack.append(int(cmd[1]))
 
-    if X == "pop":
+    if cmd[0] == "pop":
         if len(stack)==0:
             print(-1)
         else : print(stack.pop())
 
-    if X == "size":
+    if cmd[0] == "size":
         print(len(stack))
 
-    if X == "empty":
+    if cmd[0] == "empty":
         if len(stack)==0:
             print(1)
         else : print(0)
 
-    if X == "top":
+    if cmd[0] == "top":
         if len(stack)==0:
             print(-1)
         else : print(stack[-1])
 
     
-
-
+# sys.stdin.readline()
+# input()은 속도가 느림 -> stdin.readline() 이용
+# stdin -> standard input
+# readline() -> 한 줄 읽기
+# /n을 자동으로 포함하는 함수
 
 
 '''
