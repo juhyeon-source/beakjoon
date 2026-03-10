@@ -33,7 +33,7 @@ for i in range(n):
     if X == "pop":
         if len(stack)==0:
             print(-1)
-        print(stack.pop())
+        else : print(stack.pop())
 
     if X == "size":
         print(len(stack))
@@ -41,23 +41,17 @@ for i in range(n):
     if X == "empty":
         if len(stack)==0:
             print(1)
-        print(0)
+        else : print(0)
 
     if X == "top":
         if len(stack)==0:
             print(-1)
-        print(stack[-1])
+        else : print(stack[-1])
 
     
 
 
 
-# push X => stack.append(X)
-# pop => print(stack.pop())
-        #  stack이 비었어? 그럼 print(1)
-# size => print(len(stack))
-# empty => if len(stack)==0? print(1), else print(0)
-# top => print(stack[-1]) if len(stack)==0? print(-1)
 
 '''
 [예제 입력1]
