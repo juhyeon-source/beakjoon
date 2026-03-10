@@ -22,6 +22,7 @@ import sys
 
 stack = []
 n = int(sys.stdin.readline())
+output = []
 
 for i in range(n):
     cmd = sys.stdin.readline().split()
@@ -31,23 +32,24 @@ for i in range(n):
 
     if cmd[0] == "pop":
         if len(stack)==0:
-            print(-1)
-        else : print(stack.pop())
+            output.append("-1")
+        else : output.append(str(stack.pop()))
 
     if cmd[0] == "size":
-        print(len(stack))
+        output.append(str(len(stack)))
 
     if cmd[0] == "empty":
         if len(stack)==0:
-            print(1)
-        else : print(0)
+            output.append("1")
+        else : output.append("0")
 
     if cmd[0] == "top":
         if len(stack)==0:
-            print(-1)
-        else : print(stack[-1])
+            output.append("-1")
+        else : output.append(str(stack[-1]))
 
-    
+print("\n".join(output))    
+
 # sys.stdin.readline()
 # input()은 속도가 느림 -> stdin.readline() 이용
 # stdin -> standard input
