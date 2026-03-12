@@ -11,14 +11,14 @@
 import sys
 
 T = int(sys.stdin.readline())
-output = []
 
 for i in range(T):
     cmd = sys.stdin.readline().split()
+    output = []
 
     for j in range(len(cmd)):
         output.append(cmd[j][::-1])
-        
+
     print(" ".join(output))
 
 
